@@ -1,2 +1,0 @@
-cubic-spline-interpolation
-==========================
