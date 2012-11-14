@@ -22,4 +22,4 @@ For the example,
 
 ``demo.png`` should look something like:
 
-.. image:: https://raw.github.com/rossfadely/cubic-spline-interpolation/master/demo-result.png
+.. image:: https://raw.github.com/rossfadely/cubic-spline-interpolation/master/demo.png
