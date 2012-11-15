@@ -1,4 +1,3 @@
-
 //
 // Cubic spline interpolation using GSL's functions.
 // (http://www.gnu.org/software/gsl/)
@@ -16,8 +15,8 @@
 #include <gsl/gsl_spline.h>
 
 void cubic_spline_interp_1d(long Nref, long Nout, \
-                            double *ref_x, double *ref_y, 
-                            double *out_x, double *out_y,
+                            double *ref_x, double *ref_y, \
+                            double *out_x, double *out_y, \
                             int32_t *mask) {
 
     long ii;
