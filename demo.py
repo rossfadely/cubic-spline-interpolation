@@ -8,15 +8,15 @@ def _load_cubic_spline_interp_1d(dll_path,function_name):
     """
     This reads in the compiled interpolation library
     """
-    dll=ctypes.CDLL(dll_path,mode=ctypes.RTLD_GLOBAL)
-    func=dll.cubic_spline_interp_1d
+    dll = ctypes.CDLL(dll_path,mode=ctypes.RTLD_GLOBAL)
+    func = dll.cubic_spline_interp_1d
     func.argtypes = [c_long,c_long,POINTER(c_double),
                      POINTER(c_double),POINTER(c_double),
                      POINTER(c_double),POINTER(c_int)]
     return func
 
 cubic_interp=_load_cubic_spline_interp_1d('./_cubic_spline_interp_1d.so',
-                                        'cubic_spline_interp_1d')
+                                          'cubic_spline_interp_1d')
 
 if __name__ == '__main__':
     """
@@ -46,7 +46,7 @@ if __name__ == '__main__':
 
     cubic_interp(x.shape[0],xnew.shape[0],x_p,y_p,xnew_p,ynew_p,mask_p)
 
-    fig=pl.figure()
+    fig = pl.figure()
     pl.plot(x,y,'bo',label='Reference')
     pl.plot(xnew,ynew,'ro',label='Interpolated')
     ind = mask==1
